@@ -1,0 +1,65 @@
+				
+			
+			README
+		Files: wordCount.cpp
+		Author: Connor Leslie
+		Class: CS315
+		Date: 4/14/21
+
+
+
+Discription(main): The program take in input from stdout, counts the occurances of words, 
+	and prints them bothe by ascii and by occurance
+
+
+const:
+	char PUNC[]: all characters to be removed from inputs
+	int PUNCLEN: value of the length of PUNC
+
+
+
+struct hashNode:
+	holds a word and how many times it has been inputted
+
+
+
+func makeNode:
+	returns a node with the given word
+
+func hashValue:
+	calculates a hash Value for a given word
+
+func partitionOnWord:
+	partitions list for QuickSort on hashNode.word
+
+func quickSortOnWord:
+	quicksorts list on hashNode.word
+
+func sortOnWord:
+	calls quickSortOnWord for entire list
+
+func partitionOnAmount:
+	partitions List for QuickSort on hashNode.amount
+
+func quickSortOnAmount:
+	quicksorts list on hashNode.amount
+
+func sortOnAmount:
+	calls quickSortOnAmount for entire list
+
+func addOne:
+	find node with .word equal to given key and add one to its amount and return 1
+	if not found return -1
+
+func endPunClean:
+	return -1 if string is empty
+	remove characters in PUNC from front and back of given string and return 1
+
+func middlePuncClean:
+	ONLY USEFUL AFTER CALL TO endPuncClean();
+	break apart string into words seperated by chars in PUNC and add them to given list
+
+func print:
+	prints the value of hashNodes in a vector<hashNode>
+
+

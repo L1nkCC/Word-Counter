@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0068)https://www.cs.uky.edu/~raphael/courses/CS315/prog4/asg.hashing.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style> code {font-size: 15px; color: blue;} </style>
+<title></title></head><body>
+<div style="text-align:center;"><h1>Programming Assignment:  Word Counter</h1></div>
+<h2>1. The problem</h2>
+<p>
+You have been hired by Grate Books Publishing to help authors with their prose.
+You are supposed to warn authors if they use words too frequently.  Authors give
+you a document as an ordinary text file.  You have to collect the words of the
+file (case is significant; discard punctuation and spacing; only use letters A-Z
+and a-z and underscore '_') and print two
+outputs.  Both outputs list all the words and the number of times they appear,
+one word per line, no word duplicated.  For example, you might print
+</p><pre>dark 1
+stormy 1
+night 4
+the 18
+they 2
+</pre>
+The first output should be sorted by word (in ASCII alphabetical order), the
+second by number of occurrences (in reverse numerical order; ties may be in any
+order).
+<h2>2. What to do</h2>
+<p>
+Your program should be called wordCount.  It should accept the text file from
+standard input.
+The output must obey the following specifications.
+Output both lists to standard output, with a single blank line
+between the lists, and no other information (such as headings).
+Each line holds a single word and its count, separated by a single space.
+</p><p>
+You must use a hash table to store the counts.
+You may use any hash function and any collision-resolution scheme you wish.
+</p><p>
+You must write your own sorting algorithm to sort the output and your own
+hash-table routines.  (You may not use any library routines for sorting or
+hashing.)
+You will lose 2 points if you use selection sort or insertion sort;
+you will get full credit for heapsort, merge sort, or quicksort.
+You may not use any other sorting method.
+</p><h2>Useful tools</h2>
+<p>
+You have access to some useful tools.  First, there is a sample
+<code>Makefile</code> at
+<code><a href="http://www.cs.uky.edu/~raphael/courses/CS315/prog4/Makefile">http://www.cs.uky.edu/~raphael/courses/CS315/prog4/Makefile</a></code>.
+It has a <i>run</i> target that compiles your program (either <code>wordCount.c</code> or
+<code>wordCount.cpp</code>) and runs it.  It also has a <i>runWorking</i> target that gets and
+runs a working program so you can compare your output against it.
+</p><p>
+</p><h2>3. What to hand in</h2>
+<p>
+Your submission should include your program, all documentation,
+your program's output on the data in
+<code><a href="http://www.cs.uky.edu/~raphael/courses/CS315/prog4/data.txt">http://www.cs.uky.edu/~raphael/courses/CS315/prog4/data.txt</a></code>,
+your own test data, and your program's output on that test data.
+</p><h2>4. Extra credit ideas</h2>
+<ol>
+<li>
+
+Implement heapsort, merge sort, and quicksort and measure the number of data
+motions and comparisons each requires.
+(Maximum 0.5 extra-credit points)
+</li><li>
+
+Suppress very common words such as <i>the</i> from consideration by
+referring to a separate hash table of "stop" words.
+(Maximum 0.3 extra-credit points)
+</li><li>
+
+Implement several collision-resolution schemes and measure the number of key
+comparisons your program uses for each.
+(Maximum 0.5 extra-credit points)
+</li></ol>
+
+</body></html>
